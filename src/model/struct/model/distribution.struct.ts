@@ -22,7 +22,12 @@ export class DistributionStructure implements ModelStructure<Distribution> {
     public async getSpecModel(): Promise<Distribution> {
         return {
             version: '1.0.0',
-            rss: '<FILL IN MANUALLY>',
+            rss: 'https://launcher.floot.host/news.rss',
+            discord: {
+                clientId: '521296835185475594',
+                smallImageText: 'FlootLauncher',
+                smallImageKey: 'sealcircle'
+            },
             servers: await this.serverStruct.getSpecModel()
         }
     }
